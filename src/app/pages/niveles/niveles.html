@@ -1,0 +1,42 @@
+<section class="container py-5">
+  <div class="text-center mb-5">
+    <h1 class="fw-bold text-primary display-5">Niveles de Estudio y Modalidades</h1>
+    <p class="lead text-muted">Aprende con programas estructurados según el Marco Común Europeo de Referencia (CEFR).</p>
+  </div>
+
+  <!-- Niveles de Estudio -->
+  <div class="row g-4 mb-5">
+    <div class="col-12">
+      <h3 class="fw-semibold mb-3 border-bottom pb-2">
+        <i class="bi bi-bar-chart-steps text-primary me-2"></i>Niveles de Estudio
+      </h3>
+    </div>
+    <div class="col-md-4" *ngFor="let item of nivelesEstudio">
+      <div class="card h-100 shadow-sm border-0 border-start border-4 {{ item.color }}">
+        <div class="card-body">
+          <span class="badge bg-light text-dark border mb-2">{{ item.duracion }}</span>
+          <h4 class="card-title fw-bold text-dark">{{ item.nivel }}</h4>
+          <p class="card-text text-secondary">{{ item.descripcion }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modalidades de Enseñanza -->
+  <div class="row g-4">
+    <div class="col-12">
+      <h3 class="fw-semibold mb-3 border-bottom pb-2">
+        <i class="bi bi-person-workspace text-primary me-2"></i>Modalidades de Enseñanza
+      </h3>
+    </div>
+    <div class="col-md-4" *ngFor="let mod of modalidades">
+      <div class="card h-100 shadow-sm border-0 bg-light text-center p-3">
+        <div class="card-body">
+          <i class="bi {{ mod.icono }} fs-1 text-primary mb-3 d-block"></i>
+          <h4 class="card-title fw-bold">{{ mod.nombre }}</h4>
+          <p class="card-text text-muted">{{ mod.descripcion }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
