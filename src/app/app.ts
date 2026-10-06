@@ -1,12 +1,21 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+import { Comunidad } from './componentes/comunidad/comunidad';
+import { Docentes } from './componentes/docentes/docentes';
+import { Footer } from './componentes/footer/footer';
+import { Nosotros } from './componentes/nosotros/nosotros';
+import { Oferta } from './componentes/oferta/oferta';
 
 @Component({
-  imports: [RouterOutlet],
   selector: 'app-root',
-  styleUrl: './app.css',
+  standalone: true,
+  imports: [
+    Comunidad,
+    Docentes,
+    Footer,
+    Nosotros,
+    Oferta
+  ],
   templateUrl: './app.html',
+  styleUrl: './app.css'
 })
-export class App {
-  protected readonly title = signal('examen_parcial');
-}
+export class App {}
