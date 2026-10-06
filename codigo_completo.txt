@@ -1,0 +1,716 @@
+﻿=== FILE: D:\PW\examen_parcial\src\app\components\informacion\informacion.css ===
+
+
+=== FILE: D:\PW\examen_parcial\src\app\components\informacion\informacion.html ===
+<section id="informacion" class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold text-primary">InformaciÃ³n de InterÃ©s para Estudiantes</h2>
+      <p class="text-muted">Conoce los requisitos, horarios y el proceso de inscripciÃ³n.</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Horarios y Turnos -->
+      <div class="col-lg-6">
+        <div class="card border-0 shadow-sm h-100 p-3">
+          <div class="card-body">
+            <h4 class="card-title fw-bold text-primary mb-3"><i class="bi bi-clock me-2"></i>Horarios Disponibles</h4>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span><strong>Diario (Lunes a Viernes):</strong> 08:00 - 10:00 / 18:00 - 20:00</span>
+                <span class="badge bg-success rounded-pill">Disponible</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span><strong>Sabatino:</strong> 08:00 - 13:00</span>
+                <span class="badge bg-success rounded-pill">Disponible</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span><strong>Dominical:</strong> 08:00 - 13:00</span>
+                <span class="badge bg-warning rounded-pill">Pocos cupos</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Proceso de MatrÃ­cula y Requisitos -->
+      <div class="col-lg-6">
+        <div class="card border-0 shadow-sm h-100 p-3">
+          <div class="card-body">
+            <h4 class="card-title fw-bold text-primary mb-3"><i class="bi bi-file-earmark-check me-2"></i>Proceso de MatrÃ­cula</h4>
+            <ol class="list-group list-group-numbered list-group-flush">
+              <li class="list-group-item">Completar la ficha de pre-inscripciÃ³n en lÃ­nea.</li>
+              <li class="list-group-item">Rendir el examen de ubicaciÃ³n opcional (sin costo adicional).</li>
+              <li class="list-group-item">Adjuntar copia de DNI / Documento de identidad.</li>
+              <li class="list-group-item">Realizar el pago mediante banca por internet o caja del campus.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Banner Promociones y Beneficios -->
+    <div class="alert alert-primary mt-5 rounded-4 p-4 d-flex align-items-center justify-content-between flex-wrap gap-3">
+      <div>
+        <h4 class="alert-heading fw-bold mb-1"><i class="bi bi-gift-fill me-2"></i>Descuento por Pronto Pago y Convenios</h4>
+        <p class="mb-0">ObtÃ©n un **15% de descuento** si te matriculas antes del inicio de ciclo o cuentas con convenio corporativo/estudiantil Continental.</p>
+      </div>
+      <button class="btn btn-primary btn-lg rounded-pill px-4">Solicitar Beneficio</button>
+    </div>
+  </div>
+</section>
+
+
+=== FILE: D:\PW\examen_parcial\src\app\components\informacion\informacion.spec.ts ===
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { Informacion } from './informacion';
+
+describe('Informacion', () => {
+  let component: Informacion;
+  let fixture: ComponentFixture<Informacion>;
+
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      imports: [Informacion],
+    }).compileComponents();
+
+    fixture = TestBed.createComponent(Informacion);
+    component = fixture.componentInstance;
+    await fixture.whenStable();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});
+
+
+=== FILE: D:\PW\examen_parcial\src\app\components\informacion\informacion.ts ===
+import { Component } from '@angular/core';
+
+@Component({
+  imports: [],
+  selector: 'app-informacion',
+  styleUrl: './informacion.css',
+  templateUrl: './informacion.html',
+})
+export class Informacion {}
+
+
+=== FILE: D:\PW\examen_parcial\src\app\components\navbar\navbar.css ===
+
+
+=== FILE: D:\PW\examen_parcial\src\app\components\navbar\navbar.html ===
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow-sm">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+      <i class="bi bi-translate fs-3"></i>
+      <span class="fw-bold">Centro de Idiomas Continental</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-semibold">
+        <li class="nav-item"><a class="nav-link active" href="#inicio">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="#niveles">Niveles y Modalidades</a></li>
+        <li class="nav-item"><a class="nav-link" href="#informacion">MatrÃ­cula e Info</a></li>
+        <li class="nav-item"><a class="nav-link" href="#valor-agregado">Propuesta de Valor</a></li>
+      </ul>
+      <a href="#informacion" class="btn btn-outline-light ms-lg-3 rounded-pill px-3">InscrÃ­bete</a>
+    </div>
+  </div>
+</nav>
+
+
+=== FILE: D:\PW\examen_parcial\src\app\components\navbar\navbar.spec.ts ===
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { Navbar } from './navbar';
+
+describe('Navbar', () => {
+  let component: Navbar;
+  let fixture: ComponentFixture<Navbar>;
+
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      imports: [Navbar],
+    }).compileComponents();
+
+    fixture = TestBed.createComponent(Navbar);
+    component = fixture.componentInstance;
+    await fixture.whenStable();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});
+
+
+=== FILE: D:\PW\examen_parcial\src\app\components\navbar\navbar.ts ===
+import { Component } from '@angular/core';
+
+@Component({
+  imports: [],
+  selector: 'app-navbar',
+  styleUrl: './navbar.css',
+  templateUrl: './navbar.html',
+})
+export class Navbar {}
+
+
+=== FILE: D:\PW\examen_parcial\src\app\components\valor-agregado\valor-agregado.css ===
+
+
+=== FILE: D:\PW\examen_parcial\src\app\components\valor-agregado\valor-agregado.html ===
+<section id="valor-agregado" class="py-5 bg-dark text-white">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="badge bg-warning text-dark px-3 py-2 fw-bold text-uppercase">Nuestra Propuesta Diferenciadora</span>
+      <h2 class="fw-bold mt-2">Valor Agregado del RediseÃ±o</h2>
+      <p class="text-light">Mejoras implementadas para superar la experiencia del sitio web anterior.</p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card bg-secondary text-white border-0 h-100 p-3">
+          <div class="card-body">
+            <i class="bi bi-speedometer2 text-warning fs-1 mb-3 d-block"></i>
+            <h5 class="card-title fw-bold">Prueba de NivelaciÃ³n Digital</h5>
+            <p class="card-text text-light">Simulador interactivo en lÃ­nea para conocer tu nivel de inglÃ©s en menos de 5 minutos antes de matricularte.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card bg-secondary text-white border-0 h-100 p-3">
+          <div class="card-body">
+            <i class="bi bi-chat-heart text-warning fs-1 mb-3 d-block"></i>
+            <h5 class="card-title fw-bold">Clubes de ConversaciÃ³n Gratuitos</h5>
+            <p class="card-text text-light">Acceso ilimitado a talleres semanales de speaking con ponentes nativos para todos los estudiantes matriculados.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card bg-secondary text-white border-0 h-100 p-3">
+          <div class="card-body">
+            <i class="bi bi-bell text-warning fs-1 mb-3 d-block"></i>
+            <h5 class="card-title fw-bold">Notificaciones y Seguimiento en Vivo</h5>
+            <p class="card-text text-light">Plataforma integrada con alertas de inicio de matrÃ­culas, recordatorios de pagos y eventos del Centro de Idiomas.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+=== FILE: D:\PW\examen_parcial\src\app\components\valor-agregado\valor-agregado.spec.ts ===
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ValorAgregado } from './valor-agregado';
+
+describe('ValorAgregado', () => {
+  let component: ValorAgregado;
+  let fixture: ComponentFixture<ValorAgregado>;
+
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      imports: [ValorAgregado],
+    }).compileComponents();
+
+    fixture = TestBed.createComponent(ValorAgregado);
+    component = fixture.componentInstance;
+    await fixture.whenStable();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});
+
+
+=== FILE: D:\PW\examen_parcial\src\app\components\valor-agregado\valor-agregado.ts ===
+import { Component } from '@angular/core';
+
+@Component({
+  imports: [],
+  selector: 'app-valor-agregado',
+  styleUrl: './valor-agregado.css',
+  templateUrl: './valor-agregado.html',
+})
+export class ValorAgregado {}
+
+
+=== FILE: D:\PW\examen_parcial\src\app\pages\inicio\inicio.css ===
+
+
+=== FILE: D:\PW\examen_parcial\src\app\pages\inicio\inicio.html ===
+<section id="inicio" class="py-5 bg-light">
+  <div class="container">
+    <!-- Hero Banner -->
+    <div class="row align-items-center my-4">
+      <div class="col-lg-7">
+        <h1 class="display-4 fw-bold text-primary mb-3">Aprende Idiomas y Conecta con el Mundo</h1>
+        <p class="lead text-secondary mb-4">
+          En el Centro de Idiomas de Universidad Continental te preparamos para dominar nuevos idiomas con metodologÃ­as internacionales y docentes expertos.
+        </p>
+        <div class="d-flex gap-3">
+          <a href="#niveles" class="btn btn-primary btn-lg shadow-sm">Ver Niveles</a>
+          <a href="#informacion" class="btn btn-outline-primary btn-lg">Requisitos de MatrÃ­cula</a>
+        </div>
+      </div>
+      <div class="col-lg-5 text-center mt-4 mt-lg-0">
+        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=600" class="img-fluid rounded-4 shadow" alt="Estudiantes">
+      </div>
+    </div>
+
+    <!-- MisiÃ³n, VisiÃ³n y Trayectoria -->
+    <div class="row g-4 mt-5">
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm p-3">
+          <div class="card-body">
+            <i class="bi bi-award fs-1 text-primary mb-3 d-block"></i>
+            <h4 class="card-title fw-bold">Trayectoria</h4>
+            <p class="card-text text-muted">MÃ¡s de 15 aÃ±os formando estudiantes con certificaciones internacionales y acreditaciÃ³n de calidad acadÃ©mica.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm p-3">
+          <div class="card-body">
+            <i class="bi bi-compass fs-1 text-primary mb-3 d-block"></i>
+            <h4 class="card-title fw-bold">MisiÃ³n</h4>
+            <p class="card-text text-muted">Brindar enseÃ±anza multilingÃ¼e de alta calidad promoviendo el desarrollo profesional y multicultural de nuestros alumnos.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm p-3">
+          <div class="card-body">
+            <i class="bi bi-eye fs-1 text-primary mb-3 d-block"></i>
+            <h4 class="card-title fw-bold">VisiÃ³n</h4>
+            <p class="card-text text-muted">Ser el centro lingÃ¼Ã­stico referente en la regiÃ³n, reconocido por la innovaciÃ³n tecnolÃ³gica y la excelencia acadÃ©mica.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+=== FILE: D:\PW\examen_parcial\src\app\pages\inicio\inicio.spec.ts ===
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { Inicio } from './inicio';
+
+describe('Inicio', () => {
+  let component: Inicio;
+  let fixture: ComponentFixture<Inicio>;
+
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      imports: [Inicio],
+    }).compileComponents();
+
+    fixture = TestBed.createComponent(Inicio);
+    component = fixture.componentInstance;
+    await fixture.whenStable();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});
+
+
+=== FILE: D:\PW\examen_parcial\src\app\pages\inicio\inicio.ts ===
+import { Component } from '@angular/core';
+
+@Component({
+  imports: [],
+  selector: 'app-inicio',
+  styleUrl: './inicio.css',
+  templateUrl: './inicio.html',
+})
+export class Inicio {}
+
+
+=== FILE: D:\PW\examen_parcial\src\app\pages\niveles\niveles.css ===
+
+
+=== FILE: D:\PW\examen_parcial\src\app\pages\niveles\niveles.html ===
+<section class="container py-5">
+  <div class="text-center mb-5">
+    <h1 class="fw-bold text-primary display-5">Niveles de Estudio y Modalidades</h1>
+    <p class="lead text-muted">Aprende con programas estructurados segÃºn el Marco ComÃºn Europeo de Referencia (CEFR).</p>
+  </div>
+
+  <!-- Niveles de Estudio -->
+  <div class="row g-4 mb-5">
+    <div class="col-12">
+      <h3 class="fw-semibold mb-3 border-bottom pb-2">
+        <i class="bi bi-bar-chart-steps text-primary me-2"></i>Niveles de Estudio
+      </h3>
+    </div>
+    <div class="col-md-4" *ngFor="let item of nivelesEstudio">
+      <div class="card h-100 shadow-sm border-0 border-start border-4 {{ item.color }}">
+        <div class="card-body">
+          <span class="badge bg-light text-dark border mb-2">{{ item.duracion }}</span>
+          <h4 class="card-title fw-bold text-dark">{{ item.nivel }}</h4>
+          <p class="card-text text-secondary">{{ item.descripcion }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modalidades de EnseÃ±anza -->
+  <div class="row g-4">
+    <div class="col-12">
+      <h3 class="fw-semibold mb-3 border-bottom pb-2">
+        <i class="bi bi-person-workspace text-primary me-2"></i>Modalidades de EnseÃ±anza
+      </h3>
+    </div>
+    <div class="col-md-4" *ngFor="let mod of modalidades">
+      <div class="card h-100 shadow-sm border-0 bg-light text-center p-3">
+        <div class="card-body">
+          <i class="bi {{ mod.icono }} fs-1 text-primary mb-3 d-block"></i>
+          <h4 class="card-title fw-bold">{{ mod.nombre }}</h4>
+          <p class="card-text text-muted">{{ mod.descripcion }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+=== FILE: D:\PW\examen_parcial\src\app\pages\niveles\niveles.spec.ts ===
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
+@Component({
+  selector: 'app-niveles',
+  standalone: true,
+  imports: [CommonModule],
+  templateUrl: './niveles.html', // o './niveles.component.html' segÃºn tu estructura
+  styleUrls: ['./niveles.css']   // o './niveles.component.css'
+})
+export class Niveles {
+  // Datos de los niveles segÃºn la consigna
+  nivelesEstudio = [
+    {
+      nivel: 'BÃ¡sico (A1 - A2)',
+      duracion: '6 meses',
+      descripcion: 'Desarrollo de habilidades elementales para comprender y utilizar expresiones cotidianas y frases sencillas.',
+      color: 'border-info'
+    },
+    {
+      nivel: 'Intermedio (B1 - B2)',
+      duracion: '8 meses',
+      descripcion: 'Capacidad para desenvolverse en la mayorÃ­a de situaciones cotidianas y comprender textos complejos.',
+      color: 'border-primary'
+    },
+    {
+      nivel: 'Avanzado (C1)',
+      duracion: '6 meses',
+      descripcion: 'Dominio operativo eficaz del idioma con fluidez y precisiÃ³n en Ã¡mbitos acadÃ©micos y profesionales.',
+      color: 'border-dark'
+    }
+  ];
+
+  // Modalidades de enseÃ±anza
+  modalidades = [
+    {
+      nombre: 'Presencial',
+      icono: 'bi-building',
+      descripcion: 'Clases interactivas en nuestros campus equipados con tecnologÃ­a multimedia.'
+    },
+    {
+      nombre: 'Virtual En Vivo',
+      icono: 'bi-laptop',
+      descripcion: 'Sesiones sincrÃ³nicas a travÃ©s de videollamada con docentes en tiempo real.'
+    },
+    {
+      nombre: 'HÃ­brida',
+      icono: 'bi-arrow-repeat',
+      descripcion: 'CombinaciÃ³n flexible de sesiones teÃ³ricas en lÃ­nea y prÃ¡cticas presenciales.'
+    }
+  ];
+}
+
+
+=== FILE: D:\PW\examen_parcial\src\app\pages\niveles\niveles.ts ===
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
+@Component({
+  selector: 'app-niveles',
+  standalone: true,
+  imports: [CommonModule],
+  templateUrl: './niveles.html',
+  styleUrl: './niveles.css'
+})
+export class Niveles {
+  nivelesEstudio = [
+    {
+      nivel: 'BÃ¡sico (A1 - A2)',
+      duracion: '6 meses',
+      descripcion: 'Desarrollo de habilidades elementales para comprender y utilizar expresiones cotidianas y frases sencillas.',
+      color: 'border-info'
+    },
+    {
+      nivel: 'Intermedio (B1 - B2)',
+      duracion: '8 meses',
+      descripcion: 'Capacidad para desenvolverse en la mayorÃ­a de situaciones cotidianas y comprender textos complejos.',
+      color: 'border-primary'
+    },
+    {
+      nivel: 'Avanzado (C1)',
+      duracion: '6 meses',
+      descripcion: 'Dominio operativo eficaz del idioma con fluidez y precisiÃ³n en Ã¡mbitos acadÃ©micos y profesionales.',
+      color: 'border-dark'
+    }
+  ];
+
+  modalidades = [
+    {
+      nombre: 'Presencial',
+      icono: 'bi-building',
+      descripcion: 'Clases interactivas en nuestros campus equipados con tecnologÃ­a multimedia.'
+    },
+    {
+      nombre: 'Virtual En Vivo',
+      icono: 'bi-laptop',
+      descripcion: 'Sesiones sincrÃ³nicas a travÃ©s de videollamada con docentes en tiempo real.'
+    },
+    {
+      nombre: 'HÃ­brida',
+      icono: 'bi-arrow-repeat',
+      descripcion: 'CombinaciÃ³n flexible de sesiones teÃ³ricas en lÃ­nea y prÃ¡cticas presenciales.'
+    }
+  ];
+}
+
+
+=== FILE: D:\PW\examen_parcial\src\app\app.config.server.ts ===
+import { mergeApplicationConfig, ApplicationConfig } from '@angular/core';
+import { provideServerRendering, withRoutes } from '@angular/ssr';
+import { appConfig } from './app.config';
+import { serverRoutes } from './app.routes.server';
+
+const serverConfig: ApplicationConfig = {
+  providers: [
+    provideServerRendering(withRoutes(serverRoutes))
+  ]
+};
+
+export const config = mergeApplicationConfig(appConfig, serverConfig);
+
+
+=== FILE: D:\PW\examen_parcial\src\app\app.config.ts ===
+import { ApplicationConfig, provideBrowserGlobalErrorListeners } from '@angular/core';
+import { provideRouter } from '@angular/router';
+import { routes } from './app.routes';
+import { provideClientHydration } from '@angular/platform-browser';
+
+export const appConfig: ApplicationConfig = {
+  providers: [
+    provideBrowserGlobalErrorListeners(),
+    provideRouter(routes), provideClientHydration()
+  ]
+};
+
+
+=== FILE: D:\PW\examen_parcial\src\app\app.css ===
+
+
+=== FILE: D:\PW\examen_parcial\src\app\app.html ===
+<app-navbar></app-navbar>
+<app-inicio></app-inicio>
+<app-niveles></app-niveles>
+<app-informacion></app-informacion>
+<app-valor-agregado></app-valor-agregado>
+
+
+=== FILE: D:\PW\examen_parcial\src\app\app.routes.server.ts ===
+import { RenderMode, ServerRoute } from '@angular/ssr';
+
+export const serverRoutes: ServerRoute[] = [
+  {
+    path: '**',
+    renderMode: RenderMode.Prerender
+  }
+];
+
+
+=== FILE: D:\PW\examen_parcial\src\app\app.routes.ts ===
+import { Routes } from '@angular/router';
+
+export const routes: Routes = [];
+
+
+=== FILE: D:\PW\examen_parcial\src\app\app.spec.ts ===
+import { TestBed } from '@angular/core/testing';
+import { App } from './app';
+
+describe('App', () => {
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      imports: [App],
+    })
+      .compileComponents();
+  });
+
+  it('should create the app', () => {
+    const fixture = TestBed.createComponent(App);
+    const app = fixture.componentInstance;
+    expect(app).toBeTruthy();
+  });
+
+  it('should render title', async () => {
+    const fixture = TestBed.createComponent(App);
+    await fixture.whenStable();
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, examen_parcial');
+  });
+});
+
+
+=== FILE: D:\PW\examen_parcial\src\app\app.ts ===
+import { Component } from '@angular/core';
+import { Navbar } from './components/navbar/navbar';
+import { Inicio } from './pages/inicio/inicio';
+import { Niveles } from './pages/niveles/niveles';
+import { Informacion } from './components/informacion/informacion';
+import { ValorAgregado } from './components/valor-agregado/valor-agregado';
+
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  imports: [
+    Navbar,
+    Inicio,
+    Niveles,
+    Informacion,
+    ValorAgregado
+  ],
+  templateUrl: './app.html',
+  styleUrl: './app.css'
+})
+export class App {}
+
+
+=== FILE: D:\PW\examen_parcial\src\index.html ===
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Centro de Idiomas Continental</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <!-- Bootstrap CSS & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+<body>
+  <app-root></app-root>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+=== FILE: D:\PW\examen_parcial\src\main.server.ts ===
+import { BootstrapContext, bootstrapApplication } from '@angular/platform-browser';
+import { App } from './app/app';
+import { config } from './app/app.config.server';
+
+const bootstrap = (context: BootstrapContext) =>
+    bootstrapApplication(App, config, context);
+
+export default bootstrap;
+
+
+=== FILE: D:\PW\examen_parcial\src\main.ts ===
+import { bootstrapApplication } from '@angular/platform-browser';
+import { appConfig } from './app/app.config';
+import { App } from './app/app';
+
+bootstrapApplication(App, appConfig)
+  .catch((err) => console.error(err));
+
+
+=== FILE: D:\PW\examen_parcial\src\server.ts ===
+import {
+  AngularNodeAppEngine,
+  createNodeRequestHandler,
+  isMainModule,
+  writeResponseToNodeResponse,
+} from '@angular/ssr/node';
+import express from 'express';
+import { join } from 'node:path';
+
+const browserDistFolder = join(import.meta.dirname, '../browser');
+
+const app = express();
+const angularApp = new AngularNodeAppEngine();
+
+/**
+ * Example Express Rest API endpoints can be defined here.
+ * Uncomment and define endpoints as necessary.
+ *
+ * Example:
+ * ```ts
+ * app.get('/api/{*splat}', (req, res) => {
+ *   // Handle API request
+ * });
+ * ```
+ */
+
+/**
+ * Serve static files from /browser
+ */
+app.use(
+  express.static(browserDistFolder, {
+    maxAge: '1y',
+    index: false,
+    redirect: false,
+  }),
+);
+
+/**
+ * Handle all other requests by rendering the Angular application.
+ */
+app.use((req, res, next) => {
+  angularApp
+    .handle(req)
+    .then((response) =>
+      response ? writeResponseToNodeResponse(response, res) : next(),
+    )
+    .catch(next);
+});
+
+/**
+ * Start the server if this module is the main entry point, or it is ran via PM2.
+ * The server listens on the port defined by the `PORT` environment variable, or defaults to 4000.
+ */
+if (isMainModule(import.meta.url) || process.env['pm_id']) {
+  const port = process.env['PORT'] || 4000;
+  app.listen(port, (error) => {
+    if (error) {
+      throw error;
+    }
+
+    console.log(`Node Express server listening on http://localhost:${port}`);
+  });
+}
+
+/**
+ * Request handler used by the Angular CLI (for dev-server and during build) or Firebase Cloud Functions.
+ */
+export const reqHandler = createNodeRequestHandler(app);
+
+
+=== FILE: D:\PW\examen_parcial\src\styles.css ===
+/* You can add global styles to this file, and also import other style files */
+
+

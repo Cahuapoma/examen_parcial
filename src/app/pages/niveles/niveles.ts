@@ -1,37 +1,50 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
-  imports: [],
   selector: 'app-niveles',
-  styleUrl: './niveles.css',
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './niveles.html',
+  styleUrl: './niveles.css'
 })
 export class Niveles {
-
-niveles = [
+  nivelesEstudio = [
     {
-      nombre: 'Básico',
-      descripcion: 'Aprende vocabulario esencial, gramática básica y conversaciones cotidianas.',
-      duracion: '2 ciclos',
-      certificado: 'A1 - A2'
+      nivel: 'Básico (A1 - A2)',
+      duracion: '6 meses',
+      descripcion: 'Desarrollo de habilidades elementales para comprender y utilizar expresiones cotidianas y frases sencillas.',
+      color: 'border-info'
     },
     {
-      nombre: 'Intermedio',
-      descripcion: 'Mejora tu fluidez, comprensión auditiva y redacción de textos.',
-      duracion: '2 ciclos',
-      certificado: 'B1 - B2'
+      nivel: 'Intermedio (B1 - B2)',
+      duracion: '8 meses',
+      descripcion: 'Capacidad para desenvolverse en la mayoría de situaciones cotidianas y comprender textos complejos.',
+      color: 'border-primary'
     },
     {
-      nombre: 'Avanzado',
-      descripcion: 'Domina el idioma a nivel profesional y académico.',
-      duracion: '2 ciclos',
-      certificado: 'C1 - C2'
+      nivel: 'Avanzado (C1)',
+      duracion: '6 meses',
+      descripcion: 'Dominio operativo eficaz del idioma con fluidez y precisión en ámbitos académicos y profesionales.',
+      color: 'border-dark'
     }
   ];
 
   modalidades = [
-    { nombre: 'Presencial', icono: 'bi-building', descripcion: 'Clases en nuestras instalaciones con interacción directa.' },
-    { nombre: 'Virtual', icono: 'bi-laptop', descripcion: 'Clases en vivo por videoconferencia desde cualquier lugar.' },
-    { nombre: 'Híbrida', icono: 'bi-arrow-left-right', descripcion: 'Combina lo mejor de lo presencial y lo virtual.' }
+    {
+      nombre: 'Presencial',
+      icono: 'bi-building',
+      descripcion: 'Clases interactivas en nuestros campus equipados con tecnología multimedia.'
+    },
+    {
+      nombre: 'Virtual En Vivo',
+      icono: 'bi-laptop',
+      descripcion: 'Sesiones sincrónicas a través de videollamada con docentes en tiempo real.'
+    },
+    {
+      nombre: 'Híbrida',
+      icono: 'bi-arrow-repeat',
+      descripcion: 'Combinación flexible de sesiones teóricas en línea y prácticas presenciales.'
+    }
   ];
 }
